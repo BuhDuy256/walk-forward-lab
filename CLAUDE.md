@@ -1,7 +1,7 @@
 @AGENTS.md
 
-## Claude-specific
+## Claude skills
 
-- A full requirements change, with review: `/req-update`.
-- A review only: `/req-check`.
-- Requirement rules for Claude are in `.claude/rules/requirements.md`. They load when you work on a file under `docs/02-requirements/`.
+- `/req-update` — a full requirements change, with review. Chains `req-change` then `req-check`.
+- `/req-change` — the requirements change on its own, without the review.
+- `/req-check` — review the requirements and report. Never edits.
