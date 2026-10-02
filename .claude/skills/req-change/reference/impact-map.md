@@ -1,17 +1,10 @@
 # Impact map
 
-What to check when an item in `docs/02-requirements/` changes.
+How to read the result of the impact step, when an item in `docs/02-requirements/` changes.
 
-Links in these files point **up** only (Spec → Use case → Problem → Actor).
-So the item you change does **not** list what depends on it. You must search for it.
-
-Run this first. It walks the chain in both directions and searches the rest of the repo:
-
-```bash
-python3 tools/reqcheck.py impact <ID>
-```
-
-Then use the tables below to decide what each result means.
+The procedure, the chain and the `reqcheck.py impact` command are in
+[docs/02-requirements/AGENTS.md](../../../../docs/02-requirements/AGENTS.md). This file is
+only the tables that say what each result means.
 
 ## Inside the chain
 
@@ -32,7 +25,7 @@ Then use the tables below to decide what each result means.
 | `docs/01-glossary/01-glossary.md` | A new or changed term.                                 | Add or update the term. Requirements must use glossary words.           |
 | `docs/00-vision/00-vision.md`     | A change in scope (new feature, removed feature).      | Point it out to the user. Do not edit the vision without approval.      |
 | `docs/03-adr/`                    | ADRs that mention the ID.                              | List them. The decision may need a new ADR. Never edit an accepted ADR. |
-| `docs/05-journal/`                | —                                                      | Add a line for this change (see the format in `req-change`).            |
+| `docs/05-journal/`                | —                                                      | Add a line for this change (format in `docs/02-requirements/AGENTS.md`). |
 | `docs/06-experiments/`            | Reports measured against an NFR number.                | List them. Old numbers stay as history.                                 |
 | Tests and code                    | The ID, with `-` or `_` (e.g. `FR-BT-02`, `FR_BT_02`). | List them. Do not edit code in a requirements change. The user decides. |
 
