@@ -1,0 +1,4 @@
+# Path-scoped rules go here, one topic per file, with a `paths:` frontmatter field
+# (for example `**/*.java`). Any .md file in this folder loads as a rule, so this
+# placeholder is not a .md file. Instructions for a folder belong in that folder's
+# CLAUDE.md, not here.
