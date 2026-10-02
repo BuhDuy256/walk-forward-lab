@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(command -v python3 || command -v python)\" \"${CLAUDE_PROJECT_DIR}/tools/reqcheck_hook.py\"",
+            "timeout": 60,
+            "statusMessage": "Checking docs/02-requirements"
+          }
+        ]
+      }
+    ]
+  }
+}
